@@ -6,6 +6,7 @@ const Nexmo = require('nexmo');
 const socketio = require('socket.io');
 const mongoose = require('mongoose');
 let Student = require("./models/student");
+//const path = require("path");
 
 // init nexmo
 const nexmo = new Nexmo({
@@ -88,6 +89,10 @@ app.post('/', function(req, res) {
   );
 });
 
+/*app.get("/contact", (req, res) => {
+  res.render("index.ejs");
+});
+*/
 const port = 3000;
 const server = app.listen(port, () => console.log('Server started on port ' + port));
 
